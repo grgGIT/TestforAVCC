@@ -10,9 +10,84 @@
   <style>
     body { margin: 0; }
     #map { height: 100vh; }
+
+    /* Legend toggle button */
+    .legend-toggle {
+      position: absolute;
+      top: 90px;
+      left: 10px;
+      z-index: 1000;
+      background: #ffffff;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      padding: 6px 10px;
+      font: 14px/1.2 sans-serif;
+      cursor: pointer;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+    }
+
+    /* Legend panel */
+    .legend-panel {
+      position: absolute;
+      top: 110px;
+      left: 10px;
+      z-index: 900;
+      width: 240px;
+      max-width: 80vw;
+      background: #ffffff;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      padding: 10px 12px;
+      display: none; /* hidden by default, toggled via JS */
+      font: 14px/1.4 sans-serif;
+      pointer-events: auto;
+    }
+
+    .legend-panel h3 {
+      margin: 0 0 8px 0;
+      font-size: 16px;
+      font-weight: 600;
+    }
+
+    .legend-item {
+      display: flex;
+      align-items: center;
+      margin: 6px 0;
+    }
+
+    .legend-swatch {
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      margin-right: 8px;
+      border: 1px solid #888;
+      flex: 0 0 14px;
+    }
+
+    .swatch-blue { background: #2E7BEA; }
+    .swatch-red { background: #D64545; }
+    .swatch-green { background: #2EAD62; }
   </style>
 </head>
 <body>
+
+<button id="legendToggle" class="legend-toggle" aria-expanded="false" aria-controls="legendPanel">Legend</button>
+<div id="legendPanel" class="legend-panel" role="region" aria-label="Map legend">
+  <h3>Map Key</h3>
+  <div class="legend-item">
+    <span class="legend-swatch swatch-blue" aria-hidden="true"></span>
+    <span>Default locations</span>
+  </div>
+  <div class="legend-item">
+    <span class="legend-swatch swatch-red" aria-hidden="true"></span>
+    <span>Highlighted points</span>
+  </div>
+  <div class="legend-item">
+    <span class="legend-swatch swatch-green" aria-hidden="true"></span>
+    <span>Parks or nature</span>
+  </div>
+</div>
 
 <div id="map"></div>
 
@@ -33,7 +108,7 @@
 
   marker.bindPopup("<b>East Lansing</b><br>Home of MSU.");
 
-  fetch('data/locations.json')
+  fetch('locations.json')
   .then(response => response.json())
   .then(locations => {
     locations.forEach(place => {
@@ -41,6 +116,12 @@
         .addTo(map)
         .bindPopup("<b>" + place.name + "</b><br>" + place.blurb);
     });
+  });
+
+  // Legend toggle behavior
+  document.getElementById('legendToggle').addEventListener('click', function() {
+    var panel = document.getElementById('legendPanel');
+    panel.style.display = panel.style.display === 'block' ? 'none' : 'block';
   });
 </script>
 
