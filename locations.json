@@ -1,12 +1,170 @@
 [
   {
-    "name": "East Lansing",
-    "coords": [42.7325, -84.5555],
-    "blurb": "Home of Michigan State University."
+    "name": "MCGILL ROAD LANDFILL",
+    "latitude": 42.288290,
+    "longitude": -84.36934,
+    "county": "Jackson"
   },
   {
-    "name": "Detroit",
-    "coords": [42.3314, -83.0458],
-    "blurb": "Largest city in Michigan."
+    "name": "MATLIN ROAD LANDFILL",
+    "latitude": 42.071939,
+    "longitude": -83.38171290167636,
+    "county": "Monroe"
+  },
+  {
+    "name": "ARBOR HILLS LANDFILL, INC",
+    "latitude": 42.406611,
+    "longitude": -83.556461,
+    "county": "Wayne"
+  },
+  {
+    "name": "AUTUMN HILLS RECYCLING AND DISPOSAL FACILITY",
+    "latitude": 42.780660,
+    "longitude": -85.92072,
+    "county": "Ottawa"
+  },
+  {
+    "name": "BRENT RUN LANDFILL",
+    "latitude": 43.176465,
+    "longitude": -83.84363210190989,
+    "county": "Genesee"
+  },
+  {
+    "name": "CARLETON FARMS LANDFILL",
+    "latitude": 42.093590,
+    "longitude": -83.42138,
+    "county": "Wayne"
+  },
+  {
+    "name": "CENTRAL SANITARY LANDFILL",
+    "latitude": 43.337670,
+    "longitude": -85.51732,
+    "county": "Montcalm"
+  },
+  {
+    "name": "CITIZENS DISPOSAL INC",
+    "latitude": 46.813520,
+    "longitude": -89.18799,
+    "county": "Genesee"
+  },
+  {
+    "name": "COUNTY OF MUSKEGON - SOLID WASTE LANDFILL",
+    "latitude": 43.235180,
+    "longitude": -86.01342,
+    "county": "Muskegon"
+  },
+  {
+    "name": "EAGLE VALLEY RECYCLE & DISPOSAL FACILITY",
+    "latitude": 42.722930,
+    "longitude": -83.2536,
+    "county": "Oakland"
+  },
+  {
+    "name": "EVER-GREEN LANDFILL AND RECYCLING CENTER, LLC",
+    "latitude": 46.813520,
+    "longitude": -89.18799,
+    "county": "Ontonagon"
+  },
+  {
+    "name": "GFL NORTH MICHIGAN LANDFILL LLC",
+    "latitude": 45.282350,
+    "longitude": -84.2192,
+    "county": "Presque Isle"
+  },
+  {
+    "name": "GRANGER GRAND RIVER LANDFILL",
+    "latitude": 42.790360,
+    "longitude": -84.69512,
+    "county": "Clinton"
+  },
+  {
+    "name": "GRANGER WOOD STREET LANDFILL",
+    "latitude": 42.769680,
+    "longitude": -84.52319,
+    "county": "Ingham"
+  },
+  {
+    "name": "HIAWATHA SHORES LANDFILL",
+    "latitude": 46.065360,
+    "longitude": -86.06155,
+    "county": "Schoolcraft"
+  },
+  {
+    "name": "HURON LANDFILL CORP. – DBA HURON LANDFILL",
+    "latitude": 43.717330,
+    "longitude": -83.05799,
+    "county": "Huron"
+  },
+  {
+    "name": "K AND W LANDFILL INC",
+    "latitude": 46.788160,
+    "longitude": -89.12365,
+    "county": "Ontonagon"
+  },
+  {
+    "name": "LIBERTY ENVIRONMENTALISTS LANDFILL",
+    "latitude": 42.147810,
+    "longitude": -84.36871,
+    "county": "Jackson"
+  },
+  {
+    "name": "MANISTEE COUNTY LANDFILL INC",
+    "latitude": 44.191170,
+    "longitude": -86.26459,
+    "county": "Manistee"
+  },
+  {
+    "name": "MARQUETTE CO SOLID WASTE MGMT AUTHORITY",
+    "latitude": 46.496790,
+    "longitude": 87.46552,
+    "county": "Marquette"
+  },
+  {
+    "name": "NORTHERN OAKS RECYCLING AND DISPOSAL FACILITY",
+    "latitude": 42.071939,
+    "longitude": -83.38171290167636,
+    "county": "Clare"
+  },
+  {
+    "name": "OAKLAND HEIGHTS DEVELOPMENT INC",
+    "latitude": 42.704490,
+    "longitude": -83.24852,
+    "county": "Oakland"
+  },
+  {
+    "name": "OTTAWA COUNTY FARMS LANDFILL",
+    "latitude": 43.052160,
+    "longitude": -85.95667,
+    "county": "Ottawa"
+  },
+  {
+    "name": "PEOPLES LANDFILL INC",
+    "latitude": 43.280100,
+    "longitude": -83.87051,
+    "county": "Saginaw"
+  },
+  {
+    "name": "PINE TREE ACRES INC",
+    "latitude": 42.764970,
+    "longitude": -82.74562,
+    "county": "Macomb"
+  },
+  {
+    "name": "PITSCH SANITARY LANDFILL",
+    "latitude": 43.103470,
+    "longitude": -85.17464,
+    "county": "Ionia"
+  },
+  {
+    "name": "RIVERVIEW LAND PRESERVE",
+    "latitude": 42.157720,
+    "longitude": -83.21061,
+    "county": "Wayne"
+  },
+  {
+    "name": "MONTMORENCY-OSCODA-ALPENA SWMA",
+    "latitude": 44.942430,
+    "longitude": -84.12951,
+    "county": "Montmorency"
   }
 ]
