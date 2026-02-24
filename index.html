@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Michigan Interactive Map</title>
+  <title>Michigan Interactive Landfill Capacity Map</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Leaflet CSS -->
@@ -14,7 +14,7 @@
     /* Legend toggle button */
     .legend-toggle {
       position: absolute;
-      top: 90px;
+      top: 100px;
       left: 10px;
       z-index: 1000;
       background: #ffffff;
@@ -29,7 +29,7 @@
     /* Legend panel */
     .legend-panel {
       position: absolute;
-      top: 110px;
+      top: 120px;
       left: 10px;
       z-index: 900;
       width: 240px;
@@ -55,6 +55,18 @@
       align-items: center;
       margin: 6px 0;
     }
+    .source{
+      top: 110px;
+      left: 110px;
+      display: none;
+      width: 240px;
+      max-width: 70vw;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      padding: 10px 12px;
+      pointer-events: auto;
+    }
 
     .legend-swatch {
       width: 14px;
@@ -71,6 +83,9 @@
   </style>
 </head>
 <body>
+  <a id="source" href="https://www.michigan.gov/egle/-/media/Project/Websites/egle/Documents/Legislative/MMD/Part-115/Report-FY24-Landfilled-Solid-Waste.pdf?rev=b1a8a575d427406f8a4ad4fb4de0ff47&hash=430D8389FB9BEE4BA4AA6D076DCC50F7">
+<button>Source for Landfill Capacity and Use Data</button>
+</a>
 
 <button id="legendToggle" class="legend-toggle" aria-expanded="false" aria-controls="legendPanel">Legend</button>
 <div id="legendPanel" class="legend-panel" role="region" aria-label="Map legend">
@@ -90,7 +105,6 @@
 </div>
 
 <div id="map"></div>
-
 <!-- Leaflet JS -->
 <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 
