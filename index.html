@@ -126,9 +126,9 @@
   .then(response => response.json())
   .then(locations => {
     locations.forEach(place => {
-      L.marker(place.coords)
+      L.marker([place.latitude, place.longitude])
         .addTo(map)
-        .bindPopup("<b>" + place.name + "</b><br>" + place.blurb);
+        .bindPopup("<b>" + place.name + "</b><br>" + place.county);
     });
   });
 
