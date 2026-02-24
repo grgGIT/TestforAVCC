@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Michigan Interactive Map</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+
+  <style>
+    body { margin: 0; }
+    #map { height: 100vh; }
+  </style>
+</head>
+<body>
+
+<div id="map"></div>
+
+<!-- Leaflet JS -->
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+<script>
+  // Center on Michigan
+  var map = L.map('map').setView([44.3, -85.6], 6);
+
+  // OpenStreetMap tiles (free)
+  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19
+  }).addTo(map);
+
+  // Example dot: East Lansing
+  var marker = L.marker([42.7325, -84.5555]).addTo(map);
+
+  marker.bindPopup("<b>East Lansing</b><br>Home of MSU.");
+
+  fetch('data/locations.json')
+  .then(response => response.json())
+  .then(locations => {
+    locations.forEach(place => {
+      L.marker(place.coords)
+        .addTo(map)
+        .bindPopup("<b>" + place.name + "</b><br>" + place.blurb);
+    });
+  });
+</script>
+
+</body>
+</html>

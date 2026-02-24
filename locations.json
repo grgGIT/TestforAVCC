@@ -1,0 +1,12 @@
+[
+  {
+    "name": "East Lansing",
+    "coords": [42.7325, -84.5555],
+    "blurb": "Home of Michigan State University."
+  },
+  {
+    "name": "Detroit",
+    "coords": [42.3314, -83.0458],
+    "blurb": "Largest city in Michigan."
+  }
+]
