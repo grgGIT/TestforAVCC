@@ -158,21 +158,30 @@
   // Load locations from JSON file
   fetch('locations.json')
   .then(response => {
-    if (!response.ok) throw new Error('locations.json failed to load');
+    console.log('locations.json response status:', response.status);
+    if (!response.ok) throw new Error('locations.json failed to load with status ' + response.status);
     return response.json();
   })
   .then(locations => {
+    console.log('Loaded locations:', locations);
     if (!Array.isArray(locations)) {
+      console.error('locations is not an array:', typeof locations, locations);
       throw new Error('locations.json is not an array');
     }
-    locations.forEach(place => {
+    console.log('Number of locations:', locations.length);
+    locations.forEach((place, index) => {
+      console.log('Processing location', index, ':', place);
+      if (!place.name || place.latitude === undefined || place.longitude === undefined) {
+        console.warn('Skipping invalid location:', place);
+        return;
+      }
       var popupContent = "<b>" + place.name + "</b><br>" +
-        "<b>County:</b> " + place.county + "<br>" +
-        "<b>Remaining Capacity:</b> " + place.remainingCapacity.toLocaleString() + " tons<br>" +
-        "<b>Capacity Used FY 2024:</b> " + place.capacityUsedFY2024.toLocaleString() + " tons<br>" +
-        "<b>Projected Years Remaining:</b> " + place.projectedYearsRemaining + " years<br>" +
-        "<b>Calculated Years Remaining:</b> " + place.calculatedYearsRemaining + " years<br>" +
-        "<b>Percent Available:</b> " + place.percentAvailable.toFixed(2) + "%";
+        "<b>County:</b> " + (place.county || 'N/A') + "<br>" +
+        "<b>Remaining Capacity:</b> " + (place.remainingCapacity ? place.remainingCapacity.toLocaleString() : 'N/A') + " tons<br>" +
+        "<b>Capacity Used FY 2024:</b> " + (place.capacityUsedFY2024 ? place.capacityUsedFY2024.toLocaleString() : 'N/A') + " tons<br>" +
+        "<b>Projected Years Remaining:</b> " + (place.projectedYearsRemaining || 'N/A') + " years<br>" +
+        "<b>Calculated Years Remaining:</b> " + (place.calculatedYearsRemaining || 'N/A') + " years<br>" +
+        "<b>Percent Available:</b> " + (place.percentAvailable ? place.percentAvailable.toFixed(2) : 'N/A') + "%";
       
       L.marker([place.latitude, place.longitude])
         .addTo(map)
