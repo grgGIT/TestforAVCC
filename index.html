@@ -129,7 +129,10 @@
 
   // Load Michigan counties GeoJSON
   fetch('County.geojson')
-  .then(response => response.json())
+  .then(response => {
+    if (!response.ok) throw new Error('County.geojson failed to load');
+    return response.json();
+  })
   .then(data => {
     L.geoJSON(data, {
       style: {
@@ -144,16 +147,24 @@
         }
       }
     }).addTo(map);
-  });
+  })
+  .catch(error => console.error('Error loading County.geojson:', error));
 
   // Example dot: East Lansing
   var marker = L.marker([42.7325, -84.5555]).addTo(map);
 
   marker.bindPopup("<b>East Lansing</b><br>Home of MSU.");
 
+  // Load locations from JSON file
   fetch('locations.json')
-  .then(response => response.json())
+  .then(response => {
+    if (!response.ok) throw new Error('locations.json failed to load');
+    return response.json();
+  })
   .then(locations => {
+    if (!Array.isArray(locations)) {
+      throw new Error('locations.json is not an array');
+    }
     locations.forEach(place => {
       var popupContent = "<b>" + place.name + "</b><br>" +
         "<b>County:</b> " + place.county + "<br>" +
@@ -167,7 +178,8 @@
         .addTo(map)
         .bindPopup(popupContent);
     });
-  });
+  })
+  .catch(error => console.error('Error loading locations.json:', error));
 
   // Legend toggle behavior
   document.getElementById('legendToggle').addEventListener('click', function() {
