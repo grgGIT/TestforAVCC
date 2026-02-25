@@ -80,6 +80,16 @@
     .swatch-blue { background: #2E7BEA; }
     .swatch-red { background: #D64545; }
     .swatch-green { background: #2EAD62; }
+
+    /* State label styling */
+    .state-label {
+      background: transparent;
+      border: none;
+      color: #000;
+      font: 700 18px/1 sans-serif;
+      text-shadow: 0 0 3px rgba(255,255,255,0.9), 0 0 6px rgba(255,255,255,0.7);
+      white-space: nowrap;
+    }
   </style>
 </head>
 <body>
@@ -117,6 +127,25 @@
     maxZoom: 19
   }).addTo(map);
 
+  // Load Michigan counties GeoJSON
+  fetch('County.geojson')
+  .then(response => response.json())
+  .then(data => {
+    L.geoJSON(data, {
+      style: {
+        color: '#333333',
+        weight: 1,
+        fillColor: '#e8e8e8',
+        fillOpacity: 0.3
+      },
+      onEachFeature: function(feature, layer) {
+        if (feature.properties && feature.properties.Name) {
+          layer.bindPopup("<b>" + feature.properties.Name + " County</b>");
+        }
+      }
+    }).addTo(map);
+  });
+
   // Example dot: East Lansing
   var marker = L.marker([42.7325, -84.5555]).addTo(map);
 
@@ -126,9 +155,17 @@
   .then(response => response.json())
   .then(locations => {
     locations.forEach(place => {
+      var popupContent = "<b>" + place.name + "</b><br>" +
+        "<b>County:</b> " + place.county + "<br>" +
+        "<b>Remaining Capacity:</b> " + place.remainingCapacity.toLocaleString() + " tons<br>" +
+        "<b>Capacity Used FY 2024:</b> " + place.capacityUsedFY2024.toLocaleString() + " tons<br>" +
+        "<b>Projected Years Remaining:</b> " + place.projectedYearsRemaining + " years<br>" +
+        "<b>Calculated Years Remaining:</b> " + place.calculatedYearsRemaining + " years<br>" +
+        "<b>Percent Available:</b> " + place.percentAvailable.toFixed(2) + "%";
+      
       L.marker([place.latitude, place.longitude])
         .addTo(map)
-        .bindPopup("<b>" + place.name + "</b><br>" + place.county);
+        .bindPopup(popupContent);
     });
   });
 

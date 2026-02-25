@@ -3,168 +3,407 @@
     "name": "MCGILL ROAD LANDFILL",
     "latitude": 42.288290,
     "longitude": -84.36934,
-    "county": "Jackson"
+    "county": "Jackson",
+    "remainingCapacity": 60417,
+    "capacityUsedFY2024": 63174,
+    "projectedYearsRemaining": 1,
+    "calculatedYearsRemaining": 1,
+    "percentAvailable": 48.88
   },
   {
     "name": "MATLIN ROAD LANDFILL",
     "latitude": 42.071939,
     "longitude": -83.38171290167636,
-    "county": "Monroe"
+    "county": "Monroe",
+    "remainingCapacity": 251575,
+    "capacityUsedFY2024": 34172,
+    "projectedYearsRemaining": 92,
+    "calculatedYearsRemaining": 7,
+    "percentAvailable": 88.04
   },
   {
     "name": "ARBOR HILLS LANDFILL, INC",
     "latitude": 42.406611,
     "longitude": -83.556461,
-    "county": "Wayne"
+    "county": "Wayne",
+    "remainingCapacity": 7591322,
+    "capacityUsedFY2024": 2184355,
+    "projectedYearsRemaining": 3,
+    "calculatedYearsRemaining": 3,
+    "percentAvailable": 77.66
   },
   {
     "name": "AUTUMN HILLS RECYCLING AND DISPOSAL FACILITY",
     "latitude": 42.780660,
     "longitude": -85.92072,
-    "county": "Ottawa"
+    "county": "Ottawa",
+    "remainingCapacity": 20099700,
+    "capacityUsedFY2024": 483385,
+    "projectedYearsRemaining": 35,
+    "calculatedYearsRemaining": 42,
+    "percentAvailable": 97.65
   },
   {
     "name": "BRENT RUN LANDFILL",
     "latitude": 43.176465,
     "longitude": -83.84363210190989,
-    "county": "Genesee"
+    "county": "Genesee",
+    "remainingCapacity": 12232129,
+    "capacityUsedFY2024": 755484,
+    "projectedYearsRemaining": 30,
+    "calculatedYearsRemaining": 16,
+    "percentAvailable": 94.18
   },
   {
     "name": "CARLETON FARMS LANDFILL",
     "latitude": 42.093590,
     "longitude": -83.42138,
-    "county": "Wayne"
+    "county": "Wayne",
+    "remainingCapacity": 68777611,
+    "capacityUsedFY2024": 2043483,
+    "projectedYearsRemaining": 34,
+    "calculatedYearsRemaining": 34,
+    "percentAvailable": 97.11
   },
   {
     "name": "CENTRAL SANITARY LANDFILL",
     "latitude": 43.337670,
     "longitude": -85.51732,
-    "county": "Montcalm"
+    "county": "Montcalm",
+    "remainingCapacity": 7053296,
+    "capacityUsedFY2024": 203985,
+    "projectedYearsRemaining": 35,
+    "calculatedYearsRemaining": 35,
+    "percentAvailable": 97.19
   },
   {
     "name": "CITIZENS DISPOSAL INC",
     "latitude": 46.813520,
     "longitude": -89.18799,
-    "county": "Genesee"
+    "county": "Genesee",
+    "remainingCapacity": 4637569,
+    "capacityUsedFY2024": 396669,
+    "projectedYearsRemaining": 11,
+    "calculatedYearsRemaining": 12,
+    "percentAvailable": 92.12
   },
   {
     "name": "COUNTY OF MUSKEGON - SOLID WASTE LANDFILL",
     "latitude": 43.235180,
     "longitude": -86.01342,
-    "county": "Muskegon"
+    "county": "Muskegon",
+    "remainingCapacity": 4569913,
+    "capacityUsedFY2024": 161656,
+    "projectedYearsRemaining": 20,
+    "calculatedYearsRemaining": 28,
+    "percentAvailable": 96.58
   },
   {
     "name": "EAGLE VALLEY RECYCLE & DISPOSAL FACILITY",
     "latitude": 42.722930,
     "longitude": -83.2536,
-    "county": "Oakland"
+    "county": "Oakland",
+    "remainingCapacity": 5551105,
+    "capacityUsedFY2024": 874580,
+    "projectedYearsRemaining": 8,
+    "calculatedYearsRemaining": 6,
+    "percentAvailable": 86.39
   },
   {
     "name": "EVER-GREEN LANDFILL AND RECYCLING CENTER, LLC",
     "latitude": 46.813520,
     "longitude": -89.18799,
-    "county": "Ontonagon"
+    "county": "Ontonagon",
+    "remainingCapacity": 407916,
+    "capacityUsedFY2024": 11330,
+    "projectedYearsRemaining": 34,
+    "calculatedYearsRemaining": 36,
+    "percentAvailable": 97.30
   },
   {
     "name": "GFL NORTH MICHIGAN LANDFILL LLC",
     "latitude": 45.282350,
     "longitude": -84.2192,
-    "county": "Presque Isle"
+    "county": "Presque Isle",
+    "remainingCapacity": 871763,
+    "capacityUsedFY2024": 111477,
+    "projectedYearsRemaining": 9,
+    "calculatedYearsRemaining": 8,
+    "percentAvailable": 88.66
   },
   {
     "name": "GRANGER GRAND RIVER LANDFILL",
     "latitude": 42.790360,
     "longitude": -84.69512,
-    "county": "Clinton"
+    "county": "Clinton",
+    "remainingCapacity": 5457660,
+    "capacityUsedFY2024": 140554,
+    "projectedYearsRemaining": 38,
+    "calculatedYearsRemaining": 39,
+    "percentAvailable": 97.49
   },
   {
     "name": "GRANGER WOOD STREET LANDFILL",
     "latitude": 42.769680,
     "longitude": -84.52319,
-    "county": "Ingham"
+    "county": "Ingham",
+    "remainingCapacity": 17182435,
+    "capacityUsedFY2024": 572596,
+    "projectedYearsRemaining": 30,
+    "calculatedYearsRemaining": 30,
+    "percentAvailable": 96.78
   },
   {
     "name": "HIAWATHA SHORES LANDFILL",
     "latitude": 46.065360,
     "longitude": -86.06155,
-    "county": "Schoolcraft"
+    "county": "Schoolcraft",
+    "remainingCapacity": 1582699,
+    "capacityUsedFY2024": 32554,
+    "projectedYearsRemaining": 64,
+    "calculatedYearsRemaining": 49,
+    "percentAvailable": 97.98
   },
   {
     "name": "HURON LANDFILL CORP. – DBA HURON LANDFILL",
     "latitude": 43.717330,
     "longitude": -83.05799,
-    "county": "Huron"
+    "county": "Huron",
+    "remainingCapacity": 1892182,
+    "capacityUsedFY2024": 61008,
+    "projectedYearsRemaining": 19,
+    "calculatedYearsRemaining": 31,
+    "percentAvailable": 96.88
   },
   {
     "name": "K AND W LANDFILL INC",
     "latitude": 46.788160,
     "longitude": -89.12365,
-    "county": "Ontonagon"
+    "county": "Ontonagon",
+    "remainingCapacity": 722516,
+    "capacityUsedFY2024": 119580,
+    "projectedYearsRemaining": 6,
+    "calculatedYearsRemaining": 6,
+    "percentAvailable": 85.80
   },
   {
     "name": "LIBERTY ENVIRONMENTALISTS LANDFILL",
     "latitude": 42.147810,
     "longitude": -84.36871,
-    "county": "Jackson"
+    "county": "Jackson",
+    "remainingCapacity": 2097466,
+    "capacityUsedFY2024": 46149,
+    "projectedYearsRemaining": 10,
+    "calculatedYearsRemaining": 45,
+    "percentAvailable": 97.85
   },
   {
     "name": "MANISTEE COUNTY LANDFILL INC",
     "latitude": 44.191170,
     "longitude": -86.26459,
-    "county": "Manistee"
+    "county": "Manistee",
+    "remainingCapacity": 7617704,
+    "capacityUsedFY2024": 156057,
+    "projectedYearsRemaining": 49,
+    "calculatedYearsRemaining": 49,
+    "percentAvailable": 97.99
   },
   {
     "name": "MARQUETTE CO SOLID WASTE MGMT AUTHORITY",
     "latitude": 46.496790,
-    "longitude": 87.46552,
-    "county": "Marquette"
+    "longitude": -87.46552,
+    "county": "Marquette",
+    "remainingCapacity": 4877600,
+    "capacityUsedFY2024": 103000,
+    "projectedYearsRemaining": 57,
+    "calculatedYearsRemaining": 47,
+    "percentAvailable": 97.93
   },
   {
     "name": "NORTHERN OAKS RECYCLING AND DISPOSAL FACILITY",
     "latitude": 42.071939,
     "longitude": -83.38171290167636,
-    "county": "Clare"
+    "county": "Clare",
+    "remainingCapacity": 5592701,
+    "capacityUsedFY2024": 113360,
+    "projectedYearsRemaining": 56,
+    "calculatedYearsRemaining": 49,
+    "percentAvailable": 98.01
   },
   {
     "name": "OAKLAND HEIGHTS DEVELOPMENT INC",
     "latitude": 42.704490,
     "longitude": -83.24852,
-    "county": "Oakland"
+    "county": "Oakland",
+    "remainingCapacity": 230386,
+    "capacityUsedFY2024": 163197,
+    "projectedYearsRemaining": 11,
+    "calculatedYearsRemaining": 11,
+    "percentAvailable": 58.54
   },
   {
     "name": "OTTAWA COUNTY FARMS LANDFILL",
     "latitude": 43.052160,
     "longitude": -85.95667,
-    "county": "Ottawa"
+    "county": "Ottawa",
+    "remainingCapacity": 30191725,
+    "capacityUsedFY2024": 751656,
+    "projectedYearsRemaining": 40,
+    "calculatedYearsRemaining": 40,
+    "percentAvailable": 97.57
   },
   {
     "name": "PEOPLES LANDFILL INC",
     "latitude": 43.280100,
     "longitude": -83.87051,
-    "county": "Saginaw"
+    "county": "Saginaw",
+    "remainingCapacity": 4001361,
+    "capacityUsedFY2024": 246953,
+    "projectedYearsRemaining": 15,
+    "calculatedYearsRemaining": 16,
+    "percentAvailable": 94.19
   },
   {
     "name": "PINE TREE ACRES INC",
     "latitude": 42.764970,
     "longitude": -82.74562,
-    "county": "Macomb"
+    "county": "Macomb",
+    "remainingCapacity": 25820172,
+    "capacityUsedFY2024": 3584139,
+    "projectedYearsRemaining": 8,
+    "calculatedYearsRemaining": 7,
+    "percentAvailable": 87.81
   },
   {
     "name": "PITSCH SANITARY LANDFILL",
     "latitude": 43.103470,
     "longitude": -85.17464,
-    "county": "Ionia"
+    "county": "Ionia",
+    "remainingCapacity": 991994,
+    "capacityUsedFY2024": 293589,
+    "projectedYearsRemaining": 17,
+    "calculatedYearsRemaining": 3,
+    "percentAvailable": 77.16
   },
   {
     "name": "RIVERVIEW LAND PRESERVE",
     "latitude": 42.157720,
     "longitude": -83.21061,
-    "county": "Wayne"
+    "county": "Wayne",
+    "remainingCapacity": 5811058,
+    "capacityUsedFY2024": 516434,
+    "projectedYearsRemaining": 11,
+    "calculatedYearsRemaining": 11,
+    "percentAvailable": 91.84
   },
   {
     "name": "MONTMORENCY-OSCODA-ALPENA SWMA",
     "latitude": 44.942430,
     "longitude": -84.12951,
-    "county": "Montmorency"
+    "county": "Montmorency",
+    "remainingCapacity": 1517378,
+    "capacityUsedFY2024": 91437,
+    "projectedYearsRemaining": 17,
+    "calculatedYearsRemaining": 17,
+    "percentAvailable": 94.32
+  },
+  {
+    "name": "DELTA COUNTY LANDFILL",
+    "latitude": 46.3,
+    "longitude": -87.5,
+    "county": "Delta",
+    "remainingCapacity": 271957,
+    "capacityUsedFY2024": 70883,
+    "projectedYearsRemaining": 10,
+    "calculatedYearsRemaining": 5,
+    "percentAvailable": 79.32
+  },
+  {
+    "name": "CITY OF MIDLAND SANITARY LANDFILL",
+    "latitude": 43.6,
+    "longitude": -84.4,
+    "county": "Midland",
+    "remainingCapacity": 6029312,
+    "capacityUsedFY2024": 166304,
+    "projectedYearsRemaining": 36,
+    "calculatedYearsRemaining": 36,
+    "percentAvailable": 97.32
+  },
+  {
+    "name": "MICHIGAN ENVIRONS INC",
+    "latitude": 43.8,
+    "longitude": -83.2,
+    "county": "Tuscola",
+    "remainingCapacity": 1749498,
+    "capacityUsedFY2024": 53009,
+    "projectedYearsRemaining": 29,
+    "calculatedYearsRemaining": 33,
+    "percentAvailable": 97.06
+  },
+  {
+    "name": "DAFTER SANITARY LANDFILL",
+    "latitude": 46.5,
+    "longitude": -87.3,
+    "county": "Chippewa",
+    "remainingCapacity": 3031049,
+    "capacityUsedFY2024": 57988,
+    "projectedYearsRemaining": 34,
+    "calculatedYearsRemaining": 52,
+    "percentAvailable": 98.12
+  },
+  {
+    "name": "ORCHARD HILL SANITARY LANDFILL",
+    "latitude": 42.5,
+    "longitude": -84.8,
+    "county": "Eaton",
+    "remainingCapacity": 14737554,
+    "capacityUsedFY2024": 287875,
+    "projectedYearsRemaining": 51,
+    "calculatedYearsRemaining": 51,
+    "percentAvailable": 98.08
+  },
+  {
+    "name": "C & C EXPANDED SANITARY LANDFILL",
+    "latitude": 43.4,
+    "longitude": -84.6,
+    "county": "Shiawassee",
+    "remainingCapacity": 38837205,
+    "capacityUsedFY2024": 575432,
+    "projectedYearsRemaining": 74,
+    "calculatedYearsRemaining": 67,
+    "percentAvailable": 98.54
+  },
+  {
+    "name": "CITY ENVIRONMENTAL SERVICES INC OF WATERS",
+    "latitude": 43.9,
+    "longitude": -83.5,
+    "county": "Sanilac",
+    "remainingCapacity": 14329299,
+    "capacityUsedFY2024": 263165,
+    "projectedYearsRemaining": 206,
+    "calculatedYearsRemaining": 54,
+    "percentAvailable": 98.20
+  },
+  {
+    "name": "GLENS SANITARY LANDFILL",
+    "latitude": 43.2,
+    "longitude": -85.3,
+    "county": "Barry",
+    "remainingCapacity": 17590764,
+    "capacityUsedFY2024": 54650,
+    "projectedYearsRemaining": 32,
+    "calculatedYearsRemaining": 132,
+    "percentAvailable": 99.69
+  },
+  {
+    "name": "NIAGARA DEVELOPMENT LLC dba IN MICHIGAN AS NIAGARA DEVELOPMENT PARTNERS",
+    "latitude": 46.2,
+    "longitude": -87.8,
+    "county": "Iron",
+    "remainingCapacity": 1808856,
+    "capacityUsedFY2024": 5235,
+    "projectedYearsRemaining": 36,
+    "calculatedYearsRemaining": 34,
+    "percentAvailable": 99.71
   }
 ]
