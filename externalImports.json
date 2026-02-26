@@ -1,0 +1,66 @@
+[
+    {
+        "area": "Ontario",
+        "TotalWaste": 3464704.53
+
+    },
+    {
+        "area": "California",
+        "TotalWaste": 41
+    },
+    {
+        "area": "Delaware",
+        "TotalWaste": 34.92
+
+    },
+    {
+        "area": "Indiana",
+        "TotalWaste": 131734.46
+
+    },
+    {
+        "area": "Illinois",
+        "TotalWaste": 5
+
+    },
+    {
+        "area": "Iowa",
+        "TotalWaste": 4
+
+    },
+    {
+        "area": "Massachusetts",
+        "TotalWaste": 106323.51
+
+    },
+    {
+        "area": "Minnesota",
+        "TotalWaste": 3
+
+    },
+    {
+        "area": "Montana",
+        "TotalWaste": 6
+
+    },
+    {
+        "area": "Ohio",
+        "TotalWaste": 658734.87
+
+    },
+    {
+        "area": "Pennsylvania",
+        "TotalWaste": 6
+
+    },
+    {
+        "area": "West Virginia",
+        "TotalWaste": 3
+
+    },
+    {
+        "area": "Wisconsin",
+        "TotalWaste": 173189.24
+
+    }
+]

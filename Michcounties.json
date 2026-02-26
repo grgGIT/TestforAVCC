@@ -41,7 +41,7 @@
     },
     { "county": "Ingham", "wasteAggregate": 356060.4, "percentOfTotal": 1.81 },
     {
-      "county": "St Clair",
+      "county": "St. Clair",
       "wasteAggregate": 333934.66,
       "percentOfTotal": 1.7
     },
@@ -103,7 +103,7 @@
     },
     { "county": "Lapeer", "wasteAggregate": 103316.59, "percentOfTotal": 0.53 },
     {
-      "county": "St Joseph",
+      "county": "St. Joseph",
       "wasteAggregate": 95924.26,
       "percentOfTotal": 0.49
     },

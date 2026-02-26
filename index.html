@@ -6,6 +6,7 @@
 
   <!-- Leaflet CSS -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+  
 
   <style>
     body { margin: 0; }
@@ -79,7 +80,8 @@
 
     .swatch-blue { background: #2E7BEA; }
     .swatch-bad {background-color: #ea3345;}
-    .swatch-red { background: linear-gradient(to left, #ffe7cc 0%, #ff6800 100%) }
+    .swatch-small {background-color: #a6cee3;} 
+    .swatch-red { background: linear-gradient(to left, #ffe7cc 0%, #f09a39 50%, #703208 100%) }
     .swatch-green { background: linear-gradient(to left, #f2e6f7 0%, #803e75 100%);}
 
     /* State label styling */
@@ -91,12 +93,41 @@
       text-shadow: 0 0 3px rgba(255,255,255,0.9), 0 0 6px rgba(255,255,255,0.7);
       white-space: nowrap;
     }
+
+    /* Markers toggle button */
+    .markers-toggle {
+      position: absolute;
+      top: 40px;
+      left: 50px;
+      z-index: 1000;
+      background: #ffffff;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      padding: 8px 12px;
+      font: 14px/1.2 sans-serif;
+      cursor: pointer;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .markers-toggle input[type="checkbox"] {
+      cursor: pointer;
+      width: 18px;
+      height: 18px;
+    }
   </style>
 </head>
 <body>
   <a id="source" href="https://www.michigan.gov/egle/-/media/Project/Websites/egle/Documents/Legislative/MMD/Part-115/Report-FY24-Landfilled-Solid-Waste.pdf?rev=b1a8a575d427406f8a4ad4fb4de0ff47&hash=430D8389FB9BEE4BA4AA6D076DCC50F7">
 <button>Source for Landfill Capacity and Use Data</button>
 </a>
+
+<label class="markers-toggle" title="Toggle landfill markers visibility">
+  <input type="checkbox" id="markersToggle" checked>
+  <span>Markers</span>
+</label>
 
 <button id="legendToggle" class="legend-toggle" aria-expanded="false" aria-controls="legendPanel">Legend</button>
 <div id="legendPanel" class="legend-panel" role="region" aria-label="Map legend">
@@ -114,6 +145,10 @@
   <div class="legend-item">
     <span class="legend-swatch swatch-red" aria-hidden="true"></span>
     <span>Concentration of Solid Waste Disposal [Table 13 in source]</span>
+  </div>
+  <div class="legend-item">
+    <span class="legend-swatch swatch-small" aria-hidden="true"></span>
+    <span>Concentration of Solid Waste Disposal: Counties with less than .1% contributor of the total waste in the state</span>
   </div>
   <div class="legend-item">
     <span class="legend-swatch swatch-green" aria-hidden="true"></span>
@@ -134,6 +169,9 @@
     maxBoundsViscosity: 1.0,
     minZoom: 3
   }).setView([44.3, -85.6], 6);
+
+  // Create a FeatureGroup to hold all markers for easy toggling
+  var markersGroup = L.featureGroup().addTo(map);
 
   // OpenStreetMap tiles (free)
   L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -178,17 +216,20 @@ Promise.all([
   const maxPercent = Math.max(...countyData.map(c => c.percentOfTotal));
 
   function getColor(percent) {
-    if (!percent || percent <= 0) return '#fbe5d6'; // fallback color
+    const threshold = 0.2; // % below which counties appear very light
 
-     // Logarithmic scaling
-  const logPercent = Math.log10(percent); // log10(percent)
-  const logMax = Math.log10(maxPercent);
 
-  const intensity = logPercent / logMax; // 0 → 1 scale
 
-    // HSL Orange (Hue ≈ 30)
-    const lightness = 90 - (intensity * 80); // higher = darker
-    return `hsl(30, 90%, ${lightness}%)`;
+     if (!percent) return '#fbe5d6';         // no data
+    if (percent <= 0.1) return '#a6cee3';    // super tiny counties (for testing maybe)
+    if (percent < threshold) return '#fbe5d6';
+
+  // fractional power scaling
+  const scaled = Math.pow((percent - threshold) / (maxPercent - threshold), 0.2);
+
+  // HSL Orange (Hue ≈ 30)
+  const lightness = 90 - (scaled * 80); // 90 → 10%
+  return `hsl(30, 90%, ${lightness}%)`;
   }
 
   L.geoJSON(geoData, {
@@ -227,6 +268,63 @@ Promise.all([
 
 });
 
+Promise.all([
+  fetch('externalImports.json').then(res => res.json()),
+  fetch('ca.json').then(res => res.json()),
+  fetch('us-states.json').then(res => res.json())
+]).then(([wasteData, canadaGeo, usStatesGeo]) => {
+
+  // Lookup table for waste
+  const wasteLookup = {};
+  wasteData.forEach(d => {
+    wasteLookup[d.area.toLowerCase()] = d;
+  });
+
+// 1 Filter Canada to only Ontario
+  const ontarioFeatures = canadaGeo.features.filter(f => f.properties.id === 'CAON');
+
+  // 2 Filter US states to only those in wasteData
+  const usFeatures = usStatesGeo.features.filter(f => {
+    const name = (f.properties.name || f.properties.NAME || f.properties.Name);
+    return wasteLookup[name.toLowerCase()];
+  });
+
+  // 3 Combine into one FeatureCollection
+  const allFeatures = [...ontarioFeatures, ...usFeatures];
+
+  // 4 Determine max waste for color scaling
+  const maxWaste = Math.max(...wasteData.map(d => d.TotalWaste));
+
+  // 5 Color function (purple)
+  function getColor(waste) {
+    if (!waste || waste <= 0) return '#f3e8ff';
+    const scaled = Math.pow(waste / maxWaste, 0.25);
+    const lightness = 90 - scaled * 55;
+    const saturation = 60 + scaled * 30;
+    return `hsl(270, ${saturation}%, ${lightness}%)`;
+  }
+
+  // 6 Create Leaflet GeoJSON layer
+  L.geoJSON({ type: "FeatureCollection", features: allFeatures }, {
+    style: function(feature) {
+      const name = (feature.properties.name || feature.properties.NAME || feature.properties.Name || "Ontario");
+      const data = wasteLookup[name.toLowerCase()];
+      return {
+        color: '#333',
+        weight: 1,
+        fillColor: getColor(data.TotalWaste),
+        fillOpacity: 0.9
+      };
+    },
+    onEachFeature: function(feature, layer) {
+      const name = (feature.properties.name || feature.properties.NAME || feature.properties.Name || "Ontario");
+      const data = wasteLookup[name.toLowerCase()];
+      layer.bindPopup(`<b>${name}</b><br>Total Waste: ${data.TotalWaste.toLocaleString()} tons`);
+    }
+  }).addTo(map);
+
+}).catch(err => console.error(err));
+
 
 
   // Default dot: Lansing
@@ -238,9 +336,9 @@ Promise.all([
     weight: 1,
     opacity: 1,
     fillOpacity: 1
-  }).addTo(map).bringToFront();
+  }).addTo(markersGroup).bringToFront();
 
-  MSUmarker.bindPopup("<b>Lansing</b><br>Capital of Michigan and home to MSU.");;
+  MSUmarker.bindPopup("<b>Lansing</b><br>Capital of Michigan and home to MSU.");
 
   // Load locations from JSON file
   fetch('locations.json')
@@ -278,13 +376,13 @@ Promise.all([
             weight: 1,
             opacity: 1,
             fillOpacity: 1
-          }).addTo(map).bindPopup(popupContent).bringToFront();
+          }).addTo(markersGroup).bindPopup(popupContent).bringToFront();
           
         }
         
       
       L.marker([place.latitude, place.longitude])
-        .addTo(map)
+        .addTo(markersGroup)
         .bindPopup(popupContent);
     });
   })
@@ -294,6 +392,20 @@ Promise.all([
   document.getElementById('legendToggle').addEventListener('click', function() {
     var panel = document.getElementById('legendPanel');
     panel.style.display = panel.style.display === 'block' ? 'none' : 'block';
+  });
+
+  // Markers toggle behavior
+  var markersCheckbox = document.getElementById('markersToggle');
+  
+  // Initialize checkbox state on load
+  markersCheckbox.checked = true;
+  
+  markersCheckbox.addEventListener('change', function() {
+    if (this.checked) {
+      markersGroup.addTo(map);
+    } else {
+      map.removeLayer(markersGroup);
+    }
   });
 </script>
 
