@@ -78,6 +78,7 @@
     }
 
     .swatch-blue { background: #2E7BEA; }
+    .swatch-bad {background-color: #ea3345;}
     .swatch-red { background: linear-gradient(to left, #ffe7cc 0%, #ff6800 100%) }
     .swatch-green { background: linear-gradient(to left, #f2e6f7 0%, #803e75 100%);}
 
@@ -100,17 +101,23 @@
 <button id="legendToggle" class="legend-toggle" aria-expanded="false" aria-controls="legendPanel">Legend</button>
 <div id="legendPanel" class="legend-panel" role="region" aria-label="Map legend">
   <h3>Map Key</h3>
+  <h4>2024 Total of Solid Waste (SW): 24,136,619.52 tons</h4>
+  <h4>Average SW Total from 2021-2024: 24,128,515.14 tons</h4>
   <div class="legend-item">
     <span class="legend-swatch swatch-blue" aria-hidden="true"></span>
-    <span>Landfill locations</span>
+    <span>Included Landfill locations [Table 4 in source]</span>
+  </div>
+  <div class="legend-item">
+    <span class="legend-swatch swatch-bad" aria-hidden="true"></span>
+    <span>Landfill locations with 5 or less calculated years of capacity remaining</span>
   </div>
   <div class="legend-item">
     <span class="legend-swatch swatch-red" aria-hidden="true"></span>
-    <span>Concentration of Solid Waste Disposal</span>
+    <span>Concentration of Solid Waste Disposal [Table 13 in source]</span>
   </div>
   <div class="legend-item">
     <span class="legend-swatch swatch-green" aria-hidden="true"></span>
-    <span>Contributing Counties of States/Provinces</span>
+    <span>Contributing States/Provinces [Table 11 in source]</span>
   </div>
 </div>
 
@@ -120,7 +127,13 @@
 
 <script>
   // Center on Michigan
-  var map = L.map('map').setView([44.3, -85.6], 6);
+  // Limit map bounds from bottom of Florida to top of Ontario
+  var northAmericaBounds = [[24.5, -130], [57, -55]];
+  var map = L.map('map', {
+    maxBounds: northAmericaBounds,
+    maxBoundsViscosity: 1.0,
+    minZoom: 3
+  }).setView([44.3, -85.6], 6);
 
   // OpenStreetMap tiles (free)
   L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -139,7 +152,7 @@
         color: '#333333',
         weight: 1,
         fillColor: '#e8e8e8',
-        fillOpacity: 0.3
+        fillOpacity: .3
       },
       onEachFeature: function(feature, layer) {
         if (feature.properties && feature.properties.Name) {
@@ -150,10 +163,10 @@
   })
   .catch(error => console.error('Error loading County.geojson:', error));
 
-  // Example dot: East Lansing
+  // Default dot: Lansing
   var marker = L.marker([42.7325, -84.5555]).addTo(map);
 
-  marker.bindPopup("<b>East Lansing</b><br>Home of MSU.");
+  marker.bindPopup("<b>Lansing</b><br>Capital of Michigan and home to MSU.");
 
   // Load locations from JSON file
   fetch('locations.json')
@@ -171,17 +184,22 @@
     console.log('Number of locations:', locations.length);
     locations.forEach((place, index) => {
       console.log('Processing location', index, ':', place);
-      if (!place.name || place.latitude === undefined || place.longitude === undefined) {
+      if (!place.facility || place.latitude === undefined || place.longitude === undefined) {
         console.warn('Skipping invalid location:', place);
         return;
       }
-      var popupContent = "<b>" + place.name + "</b><br>" +
+      
+      var popupContent = "<b>" + place.facility + "</b><br>" +
         "<b>County:</b> " + (place.county || 'N/A') + "<br>" +
-        "<b>Remaining Capacity:</b> " + (place.remainingCapacity ? place.remainingCapacity.toLocaleString() : 'N/A') + " tons<br>" +
-        "<b>Capacity Used FY 2024:</b> " + (place.capacityUsedFY2024 ? place.capacityUsedFY2024.toLocaleString() : 'N/A') + " tons<br>" +
-        "<b>Projected Years Remaining:</b> " + (place.projectedYearsRemaining || 'N/A') + " years<br>" +
-        "<b>Calculated Years Remaining:</b> " + (place.calculatedYearsRemaining || 'N/A') + " years<br>" +
+        "<b>Remaining Capacity (REPORTED BY LANDFILL):</b> " + (place.remainingCapacity ? place.remainingCapacity.toLocaleString() : 'N/A') + " cubic yds<br>" +
+        "<b>Capacity Used FY 2024(REPORTED BY LANDFILL):</b> " + (place.capacityUsedFY2024 ? place.capacityUsedFY2024.toLocaleString() : 'N/A') + " cubic yds<br>" +
+        "<b>Projected Years Remaining (REPORTED BY LANDFILL):</b> " + (place.projectedYearsRemaining || 'N/A') + " years<br>" +
+        "<b>Calculated Years Remaining (CALC BY EGLE):</b> " + (place.calculatedYearsRemaining || 'N/A') + " years<br>" +
         "<b>Percent Available:</b> " + (place.percentAvailable ? place.percentAvailable.toFixed(2) : 'N/A') + "%";
+        if (place.color) {
+          popupContent = "<div style='color: " + place.color + ";'>" + popupContent + "</div>";
+          L.marker.color = place.color; // Set marker color if specified
+        }
       
       L.marker([place.latitude, place.longitude])
         .addTo(map)
