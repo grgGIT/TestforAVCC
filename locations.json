@@ -7,8 +7,7 @@
     "calculatedYearsRemaining": 3,
     "latitude": 42.406611,
     "longitude": -83.556461,
-    "county": "Wayne", 
-    "percentAvailable": 77.66,
+    "county": "Wayne",
     "color": "#ea4335"
   },
   {
@@ -19,8 +18,7 @@
     "calculatedYearsRemaining": 42,
     "latitude": 42.780660,
     "longitude": -85.92072,
-    "county": "Ottawa", 
-    "percentAvailable": 97.65
+    "county": "Ottawa"
   },
   {
     "facility": "BRENT RUN LANDFILL",
@@ -30,9 +28,7 @@
     "calculatedYearsRemaining": 16,
     "latitude": 43.176465,
     "longitude": -83.84363210190989,
-    "county": "Genesee", 
-    "percentAvailable": null
-  },
+    "county": "Genesee"  },
   {
     "facility": "C & C EXPANDED SANITARY LANDFILL",
     "remainingCapacity": 38837205,
@@ -41,8 +37,7 @@
     "calculatedYearsRemaining": 67,
     "latitude": 42.361060,
     "longitude": -85.0083,
-    "county": "Calhoun", 
-    "percentAvailable": 98.54
+    "county": "Calhoun"
   },
   {
     "facility": "CARLETON FARMS LANDFILL",
@@ -52,8 +47,7 @@
     "calculatedYearsRemaining": 34,
     "latitude": 42.093590,
     "longitude": -83.42138,
-    "county": "Wayne", 
-    "percentAvailable": null
+    "county": "Wayne"
   },
   {
     "facility": "CENTRAL SANITARY LANDFILL",
@@ -63,8 +57,7 @@
     "calculatedYearsRemaining": 35,
     "latitude": 43.337670,
     "longitude": -85.51732,
-    "county": "Montcalm", 
-    "percentAvailable": null
+    "county": "Montcalm"
   },
   {
     "facility": "CITIZENS DISPOSAL INC",
@@ -74,8 +67,7 @@
     "calculatedYearsRemaining": 12,
     "latitude": 42.924780,
     "longitude": -83.7243,
-    "county": "Genesee", 
-    "percentAvailable": 92.12
+    "county": "Genesee"
   },
   {
     "facility": "CITY ENVIRONMENTAL SERVICES INC OF WATERS",
@@ -85,9 +77,7 @@
     "calculatedYearsRemaining": 54,
     "latitude": 44.849630,
     "longitude": -84.66703,
-    "county": "Crawford", 
-    "percentAvailable": null
-  },
+    "county": "Crawford"  },
   {
     "facility": "CITY OF MIDLAND SANITARY LANDFILL",
     "remainingCapacity": 6029312,
@@ -96,9 +86,7 @@
     "calculatedYearsRemaining": 36,
     "latitude": 43.626910,
     "longitude": -84.17395,
-    "county": "Midland", 
-    "percentAvailable": null
-  },
+    "county": "Midland"  },
   {
     "facility": "COUNTY OF MUSKEGON - SOLID WASTE LANDFILL",
     "remainingCapacity": 4569913,
@@ -107,8 +95,7 @@
     "calculatedYearsRemaining": 28,
     "latitude": 43.235180,
     "longitude": -86.01342,
-    "county": "Muskegon", 
-    "percentAvailable": null
+    "county": "Muskegon"
   },
   {
     "facility": "DAFTER SANITARY LANDFILL",
@@ -118,9 +105,7 @@
     "calculatedYearsRemaining": 52,
     "latitude": 46.332010,
     "longitude": -84.44671,
-    "county": "Chippewa", 
-    "percentAvailable": null
-  },
+    "county": "Chippewa"  },
   {
     "facility": "DELTA COUNTY LANDFILL",
     "remainingCapacity": 271957,
@@ -129,8 +114,7 @@
     "calculatedYearsRemaining": 4,
     "latitude": 45.716370,
     "longitude": -87.12592,
-    "county": "Delta", 
-    "percentAvailable": 79.32,
+    "county": "Delta",
     "color": "#ea4335"
   },
   {
@@ -141,8 +125,8 @@
     "calculatedYearsRemaining": 6,
     "latitude": 42.722930,
     "longitude": -83.2536,
-    "county": "Oakland", 
-    "percentAvailable": 86.39
+    "county": "Oakland",
+    "color": "#ea4335"
   },
   {
     "facility": "EVER-GREEN LANDFILL AND RECYCLING CENTER, LLC",
@@ -152,8 +136,7 @@
     "calculatedYearsRemaining": 36,
     "latitude": 46.813520,
     "longitude": -89.18799,
-    "county": "Ontonagon", 
-    "percentAvailable": null
+    "county": "Ontonagon"
   },
   {
     "facility": "GFL NORTH MICHIGAN LANDFILL LLC",
@@ -163,8 +146,7 @@
     "calculatedYearsRemaining": 8,
     "latitude": 45.282350,
     "longitude": -84.2192,
-    "county": "Presque Isle", 
-    "percentAvailable": 88.66
+    "county": "Presque Isle"
   },
   {
     "facility": "GLENS SANITARY LANDFILL",
@@ -174,9 +156,7 @@
     "calculatedYearsRemaining": 322,
     "latitude": 44.788840,
     "longitude": -85.84796,
-    "county": "Leelanau", 
-    "percentAvailable": null
-  },
+    "county": "Leelanau"  },
   {
     "facility": "GRANGER GRAND RIVER LANDFILL",
     "remainingCapacity": 5457660,
@@ -185,8 +165,7 @@
     "calculatedYearsRemaining": 39,
     "latitude": 42.790360,
     "longitude": -84.69512,
-    "county": "Clinton", 
-    "percentAvailable": null
+    "county": "Clinton"
   },
   {
     "facility": "GRANGER WOOD STREET LANDFILL",
@@ -196,8 +175,7 @@
     "calculatedYearsRemaining": 30,
     "latitude": 42.769680,
     "longitude": -84.52319,
-    "county": "Ingham", 
-    "percentAvailable": null
+    "county": "Ingham"
   },
   {
     "facility": "HIAWATHA SHORES LANDFILL",
@@ -207,9 +185,7 @@
     "calculatedYearsRemaining": 49,
     "latitude": 46.065360,
     "longitude": -86.06155,
-    "county": "Schoolcraft", 
-    "percentAvailable": null
-  },
+    "county": "Schoolcraft"  },
   {
     "facility": "HURON LANDFILL CORP. – DBA HURON LANDFILL",
     "remainingCapacity": 1892182,
@@ -218,8 +194,7 @@
     "calculatedYearsRemaining": 31,
     "latitude": 43.717330,
     "longitude": -83.05799,
-    "county": "Huron", 
-    "percentAvailable": null
+    "county": "Huron"
   },
   {
     "facility": "K AND W LANDFILL INC",
@@ -229,8 +204,8 @@
     "calculatedYearsRemaining": 6,
     "latitude": 46.788160,
     "longitude": -89.12365,
-    "county": "Ontonagon", 
-    "percentAvailable": 85.80
+    "county": "Ontonagon",
+    "color": "#ea4335"
   },
   {
     "facility": "LIBERTY ENVIRONMENTALISTS LANDFILL",
@@ -240,9 +215,7 @@
     "calculatedYearsRemaining": 45,
     "latitude": 42.147810,
     "longitude": -84.36871,
-    "county": "Jackson", 
-    "percentAvailable": null
-  },
+    "county": "Jackson"  },
   {
     "facility": "MANISTEE COUNTY LANDFILL INC",
     "remainingCapacity": 7617704,
@@ -251,9 +224,7 @@
     "calculatedYearsRemaining": 49,
     "latitude": 44.191170,
     "longitude": -86.26459,
-    "county": "Manistee", 
-    "percentAvailable": null
-  },
+    "county": "Manistee"  },
   {
     "facility": "MARQUETTE COUNTY SOLID WASTE MANAGEMENT AUTHORITY",
     "remainingCapacity": 4877600,
@@ -262,9 +233,7 @@
     "calculatedYearsRemaining": 47,
     "latitude": 46.496790,
     "longitude": 87.46552,
-    "county": "Marquette", 
-    "percentAvailable": null
-  },
+    "county": "Marquette"  },
   {
     "facility": "MATLIN ROAD LANDFILL",
     "remainingCapacity": 251575,
@@ -273,8 +242,7 @@
     "calculatedYearsRemaining": 7,
     "latitude": 42.071939,
     "longitude": -83.38171290167636,
-    "county": "Monroe", 
-    "percentAvailable": 88.04
+    "county": "Monroe"
   },
   {
     "facility": "MCGILL ROAD LANDFILL",
@@ -284,8 +252,7 @@
     "calculatedYearsRemaining": 1,
     "latitude": 42.288290,
     "longitude": -84.36934,
-    "county": "Jackson", 
-    "percentAvailable": 48.88,
+    "county": "Jackson",
     "color": "#ea4335"
   },
   {
@@ -296,8 +263,7 @@
     "calculatedYearsRemaining": 33,
     "latitude": 45.174260,
     "longitude": -87.6383,
-    "county": "Menominee", 
-    "percentAvailable": null
+    "county": "Menominee"
   },
   {
     "facility": "MONTMORENCY-OSCODA-ALPENA SWMA",
@@ -307,8 +273,7 @@
     "calculatedYearsRemaining": 17,
     "latitude": 44.942430,
     "longitude": -84.12951,
-    "county": "Montmorency", 
-    "percentAvailable": 94.32
+    "county": "Montmorency"
   },
   {
     "facility": "NIAGARA DEVELOPMENT LLC",
@@ -318,9 +283,7 @@
     "calculatedYearsRemaining": 346,
     "latitude": 45.782730,
     "longitude": -87.9725,
-    "county": "Dickinson", 
-    "percentAvailable": null
-  },
+    "county": "Dickinson"  },
   {
     "facility": "NORTHERN OAKS RECYCLING AND DISPOSAL FACILITY",
     "remainingCapacity": 5592701,
@@ -329,9 +292,7 @@
     "calculatedYearsRemaining": 49,
     "latitude": 43.995000,
     "longitude": -84.7979,
-    "county": "Clare", 
-    "percentAvailable": null
-  },
+    "county": "Clare"  },
   {
     "facility": "OAKLAND HEIGHTS DEVELOPMENT INC",
     "remainingCapacity": 230386,
@@ -340,8 +301,7 @@
     "calculatedYearsRemaining": 1,
     "latitude": 42.704490,
     "longitude": -83.24852,
-    "county": "Oakland", 
-    "percentAvailable": 58.54,
+    "county": "Oakland",
     "color": "#ea4335"
   },
   {
@@ -352,9 +312,7 @@
     "calculatedYearsRemaining": 51,
     "latitude": 42.171260,
     "longitude": -86.28226,
-    "county": "Berrien", 
-    "percentAvailable": null
-  },
+    "county": "Berrien"  },
   {
     "facility": "OTTAWA COUNTY FARMS LANDFILL",
     "remainingCapacity": 30191725,
@@ -363,9 +321,7 @@
     "calculatedYearsRemaining": 40,
     "latitude": 43.052160,
     "longitude": -85.95667,
-    "county": "Ottawa", 
-    "percentAvailable": null
-  },
+    "county": "Ottawa"  },
   {
     "facility": "PEOPLES LANDFILL INC",
     "remainingCapacity": 4001361,
@@ -374,8 +330,7 @@
     "calculatedYearsRemaining": 16,
     "latitude": 43.280100,
     "longitude": -83.87051,
-    "county": "Saginaw", 
-    "percentAvailable": 94.18
+    "county": "Saginaw"
   },
   {
     "facility": "PINE TREE ACRES INC",
@@ -385,8 +340,7 @@
     "calculatedYearsRemaining": 7,
     "latitude": 42.764970,
     "longitude": -82.74562,
-    "county": "Macomb", 
-    "percentAvailable": 87.81
+    "county": "Macomb"
   },
   {
     "facility": "PITSCH SANITARY LANDFILL",
@@ -396,8 +350,7 @@
     "calculatedYearsRemaining": 3,
     "latitude": 43.103470,
     "longitude": -85.17464,
-    "county": "Ionia", 
-    "percentAvailable": 77.16,
+    "county": "Ionia",
     "color": "#ea4335"
   },
   {
@@ -408,8 +361,7 @@
     "calculatedYearsRemaining": 11,
     "latitude": 42.157720,
     "longitude": -83.21061,
-    "county": "Wayne", 
-    "percentAvailable": 91.84
+    "county": "Wayne"
   },
   {
     "facility": "SAUK TRAIL HILLS LANDFILL",
@@ -419,8 +371,7 @@
     "calculatedYearsRemaining": 7,
     "latitude": 42.267280,
     "longitude": -83.45594,
-    "county": "Wayne", 
-    "percentAvailable": 87.38
+    "county": "Wayne"
   },
   {
     "facility": "SC HOLDINGS, INC.",
@@ -430,19 +381,17 @@
     "calculatedYearsRemaining": 27,
     "latitude": 42.681540,
     "longitude": -85.2908,
-    "county": "Barry", 
-    "percentAvailable": 96.45
+    "county": "Barry"
   },
   {
     "facility": "SMITHS CREEK LANDFILL",
     "remainingCapacity": 16365,
     "capacityUsedFY2024": 233353,
     "projectedYearsRemaining": 70,
-    "calculatedYearsRemaining": 0,
+    "calculatedYearsRemaining": "0",
     "latitude": 42.917635,
     "longitude": -82.593029,
-    "county": "St Clair", 
-    "percentAvailable": 6.5,
+    "county": "St Clair",
     "color": "#ea4335"
   },
   {
@@ -453,8 +402,7 @@
     "calculatedYearsRemaining": 9,
     "latitude": 42.778380,
     "longitude": -85.68094,
-    "county": "Kent", 
-    "percentAvailable": 89.54
+    "county": "Kent"
   },
   {
     "facility": "SOUTHEAST BERRIEN COUNTY LANDFILL",
@@ -464,8 +412,7 @@
     "calculatedYearsRemaining": 10,
     "latitude": 41.810169,
     "longitude": -86.330867,
-    "county": "Berrien", 
-    "percentAvailable": 90.70
+    "county": "Berrien"
   },
   {
     "facility": "TRI-CITY RECYCLING AND DISPOSAL FACILITY",
@@ -475,9 +422,7 @@
     "calculatedYearsRemaining": 440,
     "latitude": 43.436790,
     "longitude": -82.73179,
-    "county": "Sanilac", 
-    "percentAvailable": null
-  },
+    "county": "Sanilac"  },
   {
     "facility": "VENICE PARK RECYCLING & DISPOSAL FACIL",
     "remainingCapacity": 6023633,
@@ -486,8 +431,7 @@
     "calculatedYearsRemaining": 13,
     "latitude": 42.985030,
     "longitude": -83.9801,
-    "county": "Shiawassee", 
-    "percentAvailable": 92.86
+    "county": "Shiawassee"
   },
   {
     "facility": "VIENNA JUNCTION INDUSTRIAL PARK SANITARY LANDFILL",
@@ -497,8 +441,7 @@
     "calculatedYearsRemaining": 4,
     "latitude": 41.731560,
     "longitude": -83.5065,
-    "county": "Monroe", 
-    "percentAvailable": 80.76,
+    "county": "Monroe",
     "color": "#ea4335"
   },
   {
@@ -509,9 +452,7 @@
     "calculatedYearsRemaining": 87,
     "latitude": 41.919080,
     "longitude": -85.680370,
-    "county": "St Joseph", 
-    "percentAvailable": null
-  },
+    "county": "St Joseph"  },
   {
     "facility": "WEXFORD COUNTY LANDFILL, LLC",
     "remainingCapacity": 15820706,
@@ -520,9 +461,7 @@
     "calculatedYearsRemaining": 43,
     "latitude": 44.353270,
     "longitude": -85.396983,
-    "county": "Wexford", 
-    "percentAvailable": null
-  },
+    "county": "Wexford"  },
   {
     "facility": "WHITEFEATHER LANDFILL - REPUBLIC SERVICES OF PINCONNING",
     "remainingCapacity": 794195,
@@ -531,8 +470,7 @@
     "calculatedYearsRemaining": 5,
     "latitude": 43.896140,
     "longitude": -83.94979,
-    "county": "Bay", 
-    "percentAvailable": 82.29,
+    "county": "Bay",
     "color": "#ea4335"
   },
   {
@@ -543,8 +481,7 @@
     "calculatedYearsRemaining": 23,
     "latitude": 46.376300,
     "longitude": -86.59535,
-    "county": "Alger", 
-    "percentAvailable": 95.86
+    "county": "Alger"
   },
   {
     "facility": "WOODLAND MEADOWS",
@@ -554,7 +491,6 @@
     "calculatedYearsRemaining": 16,
     "latitude": 42.264940,
     "longitude": -83.43365,
-    "county": "Wayne", 
-    "percentAvailable": 93.95
+    "county": "Wayne"
   }
 ]

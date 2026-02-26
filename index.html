@@ -109,7 +109,7 @@
   </div>
   <div class="legend-item">
     <span class="legend-swatch swatch-bad" aria-hidden="true"></span>
-    <span>Landfill locations with 5 or less calculated years of capacity remaining</span>
+    <span>Landfill locations with ~5 or less calculated years of capacity remaining</span>
   </div>
   <div class="legend-item">
     <span class="legend-swatch swatch-red" aria-hidden="true"></span>
@@ -194,8 +194,7 @@
         "<b>Remaining Capacity (REPORTED BY LANDFILL):</b> " + (place.remainingCapacity ? place.remainingCapacity.toLocaleString() : 'N/A') + " cubic yds<br>" +
         "<b>Capacity Used FY 2024(REPORTED BY LANDFILL):</b> " + (place.capacityUsedFY2024 ? place.capacityUsedFY2024.toLocaleString() : 'N/A') + " cubic yds<br>" +
         "<b>Projected Years Remaining (REPORTED BY LANDFILL):</b> " + (place.projectedYearsRemaining || 'N/A') + " years<br>" +
-        "<b>Calculated Years Remaining (CALC BY EGLE):</b> " + (place.calculatedYearsRemaining || 'N/A') + " years<br>" +
-        "<b>Percent Available:</b> " + (place.percentAvailable ? place.percentAvailable.toFixed(2) : 'N/A') + "%";
+        "<b>Calculated Years Remaining (CALC BY EGLE):</b> " + (place.calculatedYearsRemaining || 'N/A') + " years<br>" ;
         if (place.color) {
           popupContent = "<div style='color: " + place.color + ";'>" + popupContent + "</div>";
           L.marker.color = place.color; // Set marker color if specified
