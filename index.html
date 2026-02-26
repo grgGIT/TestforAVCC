@@ -141,32 +141,106 @@
   }).addTo(map);
 
   // Load Michigan counties GeoJSON
-  fetch('County.geojson')
-  .then(response => {
-    if (!response.ok) throw new Error('County.geojson failed to load');
-    return response.json();
-  })
-  .then(data => {
-    L.geoJSON(data, {
-      style: {
-        color: '#333333',
+  // fetch('County.geojson')
+  // .then(response => {
+  //   if (!response.ok) throw new Error('County.geojson failed to load');
+  //   return response.json();
+  // })
+  // .then(data => {
+  //   L.geoJSON(data, {
+  //     style: {
+  //       color: '#333333',
+  //       weight: 1,
+  //       fillColor: '#e8e8e8',
+  //       fillOpacity: .3
+  //     },
+  //     onEachFeature: function(feature, layer) {
+  //       if (feature.properties && feature.properties.Name) {
+  //         layer.bindPopup("<b>" + feature.properties.Name + " County</b>");
+  //       }
+  //     }
+  //   }).addTo(map);
+  // })
+  // .catch(error => console.error('Error loading County.geojson:', error));
+
+Promise.all([
+  fetch('County.geojson').then(res => res.json()),
+  fetch('Michcounties.json').then(res => res.json())
+]).then(([geoData, countyData]) => {
+
+  // Create lookup table from Michcounties.json
+  const countyLookup = {};
+  countyData.forEach(c => {
+    countyLookup[c.county.toLowerCase()] = c;
+  });
+
+  // Get max percent for color scaling
+  const maxPercent = Math.max(...countyData.map(c => c.percentOfTotal));
+
+  function getColor(percent) {
+    if (!percent || percent <= 0) return '#fbe5d6'; // fallback color
+
+     // Logarithmic scaling
+  const logPercent = Math.log10(percent); // log10(percent)
+  const logMax = Math.log10(maxPercent);
+
+  const intensity = logPercent / logMax; // 0 → 1 scale
+
+    // HSL Orange (Hue ≈ 30)
+    const lightness = 90 - (intensity * 80); // higher = darker
+    return `hsl(30, 90%, ${lightness}%)`;
+  }
+
+  L.geoJSON(geoData, {
+    style: function(feature) {
+
+      const countyName = feature.properties.Name.toLowerCase();
+      const countyInfo = countyLookup[countyName];
+
+      const percent = countyInfo ? countyInfo.percentOfTotal : 0;
+
+      return {
+        color: '#333',
         weight: 1,
-        fillColor: '#e8e8e8',
-        fillOpacity: .3
-      },
-      onEachFeature: function(feature, layer) {
-        if (feature.properties && feature.properties.Name) {
-          layer.bindPopup("<b>" + feature.properties.Name + " County</b>");
-        }
+        fillColor: getColor(percent),
+        fillOpacity: 0.7
+      };
+    },
+
+    onEachFeature: function(feature, layer) {
+
+      const countyName = feature.properties.Name.toLowerCase();
+      const countyInfo = countyLookup[countyName];
+
+      if (countyInfo) {
+        layer.bindPopup(`
+          <b>${feature.properties.Name} County</b><br>
+          Waste Aggregate: ${countyInfo.wasteAggregate.toLocaleString()}<br>
+          Percent of Total: ${countyInfo.percentOfTotal}%
+        `);
+      } else {
+        layer.bindPopup(`<b>${feature.properties.Name} County</b><br>No Data`);
       }
-    }).addTo(map);
-  })
-  .catch(error => console.error('Error loading County.geojson:', error));
+    }
+
+  }).addTo(map).bringToBack();
+
+});
+
+
 
   // Default dot: Lansing
-  var marker = L.marker([42.7325, -84.5555]).addTo(map);
+  var MSUmarker = L.circleMarker([42.7325, -84.5555], {
+    interactive: true,
+    radius: 8,
+    fillColor: '#18453b',
+    color: 'black',
+    weight: 1,
+    opacity: 1,
+    fillOpacity: 1
+  }).addTo(map).bringToFront();
 
-  marker.bindPopup("<b>Lansing</b><br>Capital of Michigan and home to MSU.");
+  MSUmarker.bindPopup("<b>Lansing</b><br>Capital of Michigan and home to MSU.");;
 
   // Load locations from JSON file
   fetch('locations.json')
@@ -197,8 +271,17 @@
         "<b>Calculated Years Remaining (CALC BY EGLE):</b> " + (place.calculatedYearsRemaining || 'N/A') + " years<br>" ;
         if (place.color) {
           popupContent = "<div style='color: " + place.color + ";'>" + popupContent + "</div>";
-          L.marker.color = place.color; // Set marker color if specified
+          L.circleMarker([place.latitude, place.longitude], {
+            radius: 8,
+            fillColor: place.color,
+            color: 'black',
+            weight: 1,
+            opacity: 1,
+            fillOpacity: 1
+          }).addTo(map).bindPopup(popupContent).bringToFront();
+          
         }
+        
       
       L.marker([place.latitude, place.longitude])
         .addTo(map)

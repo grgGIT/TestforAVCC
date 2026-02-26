@@ -1,0 +1,233 @@
+[
+    {
+      "county": "Wayne",
+      "wasteAggregate": 6281184.72,
+      "percentOfTotal": 31.93
+    },
+    {
+      "county": "Oakland",
+      "wasteAggregate": 1439200.25,
+      "percentOfTotal": 7.32
+    },
+    {
+      "county": "Monroe",
+      "wasteAggregate": 1024975.19,
+      "percentOfTotal": 5.21
+    },
+    { "county": "Kent", "wasteAggregate": 992861.79, "percentOfTotal": 5.05 },
+    {
+      "county": "Washtenaw",
+      "wasteAggregate": 771345.66,
+      "percentOfTotal": 3.92
+    },
+    { "county": "Macomb", "wasteAggregate": 738113.47, "percentOfTotal": 3.75 },
+    {
+      "county": "Genesee",
+      "wasteAggregate": 736925.35,
+      "percentOfTotal": 3.75
+    },
+    { "county": "Bay", "wasteAggregate": 689066.6, "percentOfTotal": 3.5 },
+    { "county": "Ottawa", "wasteAggregate": 628503.78, "percentOfTotal": 3.2 },
+    {
+      "county": "Kalamazoo",
+      "wasteAggregate": 518512.21,
+      "percentOfTotal": 2.64
+    },
+    { "county": "Alpena", "wasteAggregate": 447928.59, "percentOfTotal": 2.28 },
+    {
+      "county": "Calhoun",
+      "wasteAggregate": 362783.08,
+      "percentOfTotal": 1.84
+    },
+    { "county": "Ingham", "wasteAggregate": 356060.4, "percentOfTotal": 1.81 },
+    {
+      "county": "St Clair",
+      "wasteAggregate": 333934.66,
+      "percentOfTotal": 1.7
+    },
+    {
+      "county": "Saginaw",
+      "wasteAggregate": 271947.45,
+      "percentOfTotal": 1.38
+    },
+    {
+      "county": "Muskegon",
+      "wasteAggregate": 243635.77,
+      "percentOfTotal": 1.24
+    },
+    {
+      "county": "Charlevoix",
+      "wasteAggregate": 242114.42,
+      "percentOfTotal": 1.23
+    },
+    {
+      "county": "Berrien",
+      "wasteAggregate": 228853.37,
+      "percentOfTotal": 1.16
+    },
+    {
+      "county": "Allegan",
+      "wasteAggregate": 188911.58,
+      "percentOfTotal": 0.96
+    },
+    {
+      "county": "Shiawassee",
+      "wasteAggregate": 169649.27,
+      "percentOfTotal": 0.86
+    },
+    {
+      "county": "Grand Traverse",
+      "wasteAggregate": 160658.46,
+      "percentOfTotal": 0.82
+    },
+    {
+      "county": "Livingston",
+      "wasteAggregate": 157177.63,
+      "percentOfTotal": 0.8
+    },
+    {
+      "county": "Dickinson",
+      "wasteAggregate": 150596.92,
+      "percentOfTotal": 0.77
+    },
+    { "county": "Eaton", "wasteAggregate": 147994.72, "percentOfTotal": 0.75 },
+    {
+      "county": "Midland",
+      "wasteAggregate": 127105.47,
+      "percentOfTotal": 0.65
+    },
+    {
+      "county": "Jackson",
+      "wasteAggregate": 121966.57,
+      "percentOfTotal": 0.62
+    },
+    { "county": "Lapeer", "wasteAggregate": 103316.59, "percentOfTotal": 0.53 },
+    {
+      "county": "St Joseph",
+      "wasteAggregate": 95924.26,
+      "percentOfTotal": 0.49
+    },
+    {
+      "county": "Marquette",
+      "wasteAggregate": 95542.07,
+      "percentOfTotal": 0.49
+    },
+    {
+      "county": "Manistee",
+      "wasteAggregate": 93033.15,
+      "percentOfTotal": 0.47
+    },
+    { "county": "Ionia", "wasteAggregate": 84179.85, "percentOfTotal": 0.43 },
+    { "county": "Antrim", "wasteAggregate": 78111.39, "percentOfTotal": 0.4 },
+    { "county": "Clinton", "wasteAggregate": 72151.11, "percentOfTotal": 0.37 },
+    {
+      "county": "Montcalm",
+      "wasteAggregate": 69655.47,
+      "percentOfTotal": 0.35
+    },
+    { "county": "Huron", "wasteAggregate": 63192.96, "percentOfTotal": 0.32 },
+    {
+      "county": "Van Buren",
+      "wasteAggregate": 62896.75,
+      "percentOfTotal": 0.32
+    },
+    { "county": "Wexford", "wasteAggregate": 58665.15, "percentOfTotal": 0.3 },
+    { "county": "Chippewa", "wasteAggregate": 58645.86, "percentOfTotal": 0.3 },
+    { "county": "Branch", "wasteAggregate": 58041.13, "percentOfTotal": 0.3 },
+    {
+      "county": "Schoolcraft",
+      "wasteAggregate": 57113.12,
+      "percentOfTotal": 0.29
+    },
+    {
+      "county": "Roscommon",
+      "wasteAggregate": 55252.08,
+      "percentOfTotal": 0.28
+    },
+    { "county": "Delta", "wasteAggregate": 53555.9, "percentOfTotal": 0.27 },
+    { "county": "Clare", "wasteAggregate": 49393.47, "percentOfTotal": 0.25 },
+    {
+      "county": "Isabella",
+      "wasteAggregate": 48940.66,
+      "percentOfTotal": 0.25
+    },
+    { "county": "Gratiot", "wasteAggregate": 48876.82, "percentOfTotal": 0.25 },
+    { "county": "Emmet", "wasteAggregate": 48261.25, "percentOfTotal": 0.25 },
+    { "county": "Newaygo", "wasteAggregate": 47313.69, "percentOfTotal": 0.24 },
+    { "county": "Mason", "wasteAggregate": 44014.62, "percentOfTotal": 0.22 },
+    { "county": "Tuscola", "wasteAggregate": 40891.51, "percentOfTotal": 0.21 },
+    { "county": "Barry", "wasteAggregate": 39096.71, "percentOfTotal": 0.2 },
+    { "county": "Cass", "wasteAggregate": 35934.78, "percentOfTotal": 0.18 },
+    { "county": "Iosco", "wasteAggregate": 33761.57, "percentOfTotal": 0.17 },
+    { "county": "Sanilac", "wasteAggregate": 31619.44, "percentOfTotal": 0.16 },
+    { "county": "Oceana", "wasteAggregate": 30911.17, "percentOfTotal": 0.16 },
+    {
+      "county": "Cheboygan",
+      "wasteAggregate": 30893.16,
+      "percentOfTotal": 0.16
+    },
+    {
+      "county": "Missaukee",
+      "wasteAggregate": 29706.13,
+      "percentOfTotal": 0.15
+    },
+    {
+      "county": "Hillsdale",
+      "wasteAggregate": 29338.9,
+      "percentOfTotal": 0.15
+    },
+    { "county": "Lenawee", "wasteAggregate": 28090.57, "percentOfTotal": 0.14 },
+    {
+      "county": "Houghton",
+      "wasteAggregate": 28073.89,
+      "percentOfTotal": 0.14
+    },
+    { "county": "Otsego", "wasteAggregate": 27140.67, "percentOfTotal": 0.14 },
+    { "county": "Mecosta", "wasteAggregate": 26517.08, "percentOfTotal": 0.13 },
+    { "county": "Osceola", "wasteAggregate": 25998.13, "percentOfTotal": 0.13 },
+    { "county": "Baraga", "wasteAggregate": 25624.3, "percentOfTotal": 0.13 },
+    {
+      "county": "Crawford",
+      "wasteAggregate": 25258.93,
+      "percentOfTotal": 0.13
+    },
+    { "county": "Kalkaska", "wasteAggregate": 20034.0, "percentOfTotal": 0.1 },
+    {
+      "county": "Menominee",
+      "wasteAggregate": 19334.03,
+      "percentOfTotal": 0.1
+    },
+    { "county": "Alger", "wasteAggregate": 17496.98, "percentOfTotal": 0.09 },
+    { "county": "Gladwin", "wasteAggregate": 17369.46, "percentOfTotal": 0.09 },
+    { "county": "Ogemaw", "wasteAggregate": 16196.46, "percentOfTotal": 0.08 },
+    {
+      "county": "Montmorency",
+      "wasteAggregate": 14760.91,
+      "percentOfTotal": 0.08
+    },
+    { "county": "Benzie", "wasteAggregate": 14204.13, "percentOfTotal": 0.07 },
+    { "county": "Arenac", "wasteAggregate": 11900.62, "percentOfTotal": 0.06 },
+    {
+      "county": "Mackinac",
+      "wasteAggregate": 10604.73,
+      "percentOfTotal": 0.05
+    },
+    { "county": "Gogebic", "wasteAggregate": 10287.23, "percentOfTotal": 0.05 },
+    {
+      "county": "Presque Isle",
+      "wasteAggregate": 9340.6,
+      "percentOfTotal": 0.05
+    },
+    { "county": "Oscoda", "wasteAggregate": 9039.39, "percentOfTotal": 0.05 },
+    { "county": "Leelanau", "wasteAggregate": 8797.87, "percentOfTotal": 0.04 },
+    { "county": "Lake", "wasteAggregate": 6704.81, "percentOfTotal": 0.03 },
+    { "county": "Alcona", "wasteAggregate": 6340.78, "percentOfTotal": 0.03 },
+    { "county": "Iron", "wasteAggregate": 3361.25, "percentOfTotal": 0.02 },
+    { "county": "Luce", "wasteAggregate": 2980.62, "percentOfTotal": 0.02 },
+    {
+      "county": "Ontonagon",
+      "wasteAggregate": 2950.39,
+      "percentOfTotal": 0.01
+    },
+    { "county": "Keweenaw", "wasteAggregate": 720.42, "percentOfTotal": 0.004 }
+]
