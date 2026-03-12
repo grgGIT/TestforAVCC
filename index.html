@@ -222,7 +222,7 @@ Promise.all([
 
 
      if (!percent) return '#fbe5d6';         // no data
-    if (percent <= 0.1) return '#a6cee3';    // super tiny counties (for testing maybe)
+    if (percent <= 0.5) return '#a6cee3';    // super tiny counties (for testing maybe)
     if (percent < threshold) return '#fbe5d6';
 
   // fractional power scaling
