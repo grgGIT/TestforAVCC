@@ -118,13 +118,25 @@
       width: 18px;
       height: 18px;
     }
+    .sourceButts{
+      background-color: #ccc;
+      color: #000;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      padding: 6px 10px;
+      font: 14px/1.2 sans-serif;
+      cursor: pointer;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+    }
   </style>
 </head>
 <body>
-  <a id="source" href="https://www.michigan.gov/egle/-/media/Project/Websites/egle/Documents/Legislative/MMD/Part-115/Report-FY24-Landfilled-Solid-Waste.pdf?rev=b1a8a575d427406f8a4ad4fb4de0ff47&hash=430D8389FB9BEE4BA4AA6D076DCC50F7">
-<button>Source for Landfill Capacity and Use Data</button>
-</a>
+  <!-- <a id="source" href="https://www.michigan.gov/egle/-/media/Project/Websites/egle/Documents/Legislative/MMD/Part-115/Report-FY24-Landfilled-Solid-Waste.pdf?rev=b1a8a575d427406f8a4ad4fb4de0ff47&hash=430D8389FB9BEE4BA4AA6D076DCC50F7">
+    <button class="sourceButts">Source for Landfill Capacity and Use Data</button>
+  </a> -->
+<button class="sourceButts" onclick="window.open('https://www.michigan.gov/egle/-/media/Project/Websites/egle/Documents/Legislative/MMD/Part-115/Report-FY24-Landfilled-Solid-Waste.pdf?rev=b1a8a575d427406f8a4ad4fb4de0ff47&hash=430D8389FB9BEE4BA4AA6D076DCC50F7', '_blank')">Source for Landfill Capacity and Use Data</button>
 
+<button class="sourceButts" onclick="window.open('https://youtu.be/ow5i1gYCMHY?si=6xRU7w5coU5qUz8y', '_blank')">Scale of Global Waste Video (by Corridor Crew)</button>
 <label class="markers-toggle" title="Toggle landfill markers visibility">
   <input type="checkbox" id="markersToggle" checked>
   <span>Markers</span>
@@ -222,7 +234,7 @@ Promise.all([
 
 
      if (!percent) return '#fbe5d6';         // no data
-    if (percent <= 0.5) return '#a6cee3';    // super tiny counties (for testing maybe)
+    if (percent <= 0.1) return '#a6cee3';    // super tiny counties (for testing maybe)
     if (percent < threshold) return '#fbe5d6';
 
   // fractional power scaling
